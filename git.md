@@ -2,8 +2,6 @@
 
 git flow init
 
-git branch -a
-
 git flow feature start git
 
 git flow feature finish git
@@ -21,3 +19,15 @@ git reset --hard
 git config --global user.name 'ludunyue'
 
 git config --global user.email 'ludunyue@supcon.com'
+
+git branch
+
+git branch -d
+
+git branch -a
+
+git push origin --delete feature/testfeature
+
+git restore --staged git.md
+
+test
