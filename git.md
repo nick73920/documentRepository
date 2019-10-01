@@ -2,8 +2,6 @@
 
 git flow init
 
-git branch -a
-
 git flow feature start git
 
 git flow feature finish git
@@ -31,3 +29,5 @@ git branch -a
 git push origin --delete feature/testfeature
 
 git restore --staged git.md
+
+test
