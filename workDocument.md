@@ -17,3 +17,11 @@ mes!2013
 
 # bap前端开发文档
 http://192.168.90.164:8242/ui-doc/
+
+# 工作流平台
+http://192.168.95.161:8080
+zs
+0
+
+# 报错日志路径
+C:\bap\MisServer\MsLogs\sesWssORMs\MS-Manage.log
