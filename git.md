@@ -16,16 +16,29 @@ git push origin v1.0.1
 git tag -d v1.0.1
 // 删除远程标签
 git push origin  :refs/tags/v1.0.1
-————————————————
-版权声明：本文为CSDN博主「烟雨弥漫了江南」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/u010324331/article/details/89638643
+
+# 批量删除tag
+https://segmentfault.com/a/1190000015380270
+git tag -l| awk '/^.*$/ {print $1}' | xargs git tag -d
+git show-ref --tag | awk '/^.*$/ {print ":" $2}' | xargs git push origin
+
+git tag -d v0.9
+git push origin :refs/tags/v0.9
 
 git restore .
 
 # git命令
 https://blog.csdn.net/wei371522/article/details/83186077
 
-git tag -l | xargs git tag -d #删除所有本地分支
-git fetch origin --prune #从远程拉取所有信息`
+# 删除所有本地分支
+git tag -l | xargs git tag -d
+
+# 从远程拉取所有信息`
+git fetch origin --prune
 
 # something in devbranch
+
+查看本地: 
+git tag -l
+查看远程: 
+git show-ref --tag

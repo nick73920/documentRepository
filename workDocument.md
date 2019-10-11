@@ -25,3 +25,7 @@ zs
 
 # 报错日志路径
 C:\bap\MisServer\MsLogs\sesWssORMs\MS-Manage.log
+
+# bap Bug
+http://192.168.90.104:8080/zentao/project-bug-51.html
+liwei/a_11111111

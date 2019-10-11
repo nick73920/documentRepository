@@ -1,0 +1,31 @@
+cmmtteeBrief
+安委会简介
+
+cmmtteeLevel
+安委会等级
+
+cmmtteeName
+安委会名称
+
+responsibleDepcode
+负责部门编码
+
+telephone
+联系方式
+
+http://ses-source:8018/scm/git/SupconVideoLive
+
+http://10.30.20.165:8018/scm/git/SupconVideoLive
+
+DELETE FROM SES_HIK_CAMERA
+WHERE ORGID IS NULL;
+
+liability
+
+LetterLiability
+
+sesWssOR_liabilityCategory
+
+conferenceMeet
+
+安委会会议-督办

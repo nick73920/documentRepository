@@ -11,3 +11,6 @@ http://www.thefreedictionary.com
 
 # git bash windows右键问题
 https://jingyan.baidu.com/article/86fae34618ab313c49121a34.html
+
+# cmd端口占用查询以及杀死服务
+https://blog.csdn.net/weixin_38061311/article/details/86995817
