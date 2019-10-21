@@ -1,114 +1,84 @@
+function callbackBudgetAmount(obj){
+	
+	//新增
+	if(ReactAPI.getParamsInRequestUrl().id == undefined){
+		ReactAPI.getComponentAPI('InputNumber').APIs('costBudge.budgetAmountBalance').setValue(obj);
+		ReactAPI.getComponentAPI('InputNumber').APIs('costBudge.budgetBalance').setValue(obj);
+	}else{//编辑
+		
+		//预算结余 = 预算结余 - 原来的预算额度 + 页面的预算额度
+		var newbudgetAmount = ReactAPI.getComponentAPI('InputNumber').APIs('costBudge.budgetAmountBalance').getValue() - budgetAmount + obj;
+		ReactAPI.getComponentAPI('InputNumber').APIs('costBudge.budgetAmountBalance').setValue(newbudgetAmount);
+		
+		//结余 = 结余 - 原来的预算额度 + 页面上的预算额度		
+		var newbudgetBalance = budgetBalance - budgetAmount + obj;
+		ReactAPI.getComponentAPI('InputNumber').APIs('costBudge.budgetBalance').setValue(newbudgetBalance);
+		
+		//更新相关值
+		budgetAmount = newbudgetAmount;
+		budgetBalance = newbudgetBalance;
+	
+	}
 
+}
 
-  CREATE TABLE "LW10"."SESWSSOR_LETTER_LIABILITIES" 
-   (	"ID" NUMBER(19,0), 
-	"VERSION" NUMBER(*,0) DEFAULT 0, 
-	"DELETE_TIME" TIMESTAMP (6), 
-	"MODIFY_TIME" TIMESTAMP (6), 
-	"CREATE_TIME" TIMESTAMP (6), 
-	"DELETE_STAFF_ID" NUMBER(19,0), 
-	"MODIFY_STAFF_ID" NUMBER(19,0), 
-	"CREATE_STAFF_ID" NUMBER(19,0), 
-	"VALID" NUMBER(*,0) DEFAULT 1, 
-	"CID" NUMBER(19,0), 
-	"SORT" NUMBER(*,0), 
-	"EFFECTIVE_STATE" NUMBER(19,0), 
-	"PROCESS_VERSION" NUMBER(*,0), 
-	"PROCESS_KEY" VARCHAR2(510 CHAR), 
-	"DEPLOYMENT_ID" NUMBER(19,0), 
-	"GROUP_ID" NUMBER(19,0), 
-	"STATUS" NUMBER(19,0), 
-	"EFFECT_TIME" TIMESTAMP (6), 
-	"EFFECT_STAFF_ID" NUMBER(19,0), 
-	"OWNER_DEPARTMENT_ID" NUMBER(19,0), 
-	"OWNER_POSITION_ID" NUMBER(19,0), 
-	"OWNER_STAFF_ID" NUMBER(19,0), 
-	"POSITION_LAY_REC" VARCHAR2(510 CHAR), 
-	"CREATE_POSITION_ID" NUMBER(19,0), 
-	"CREATE_DEPARTMENT_ID" NUMBER(19,0), 
-	"TABLE_NO" VARCHAR2(510 CHAR), 
-	"TABLE_INFO_ID" NUMBER(19,0), 
-	"LIABILITY_NAME" VARCHAR2(510 CHAR), 
-	"PERSON_LIABLE" NUMBER(19,0), 
-	"RESPONSIBLE_DEPARTMENT" NUMBER(19,0), 
-	"LIABLITY_SIGN_TIME" TIMESTAMP (6), 
-	"LIABILITY_CATEGORY" VARCHAR2(510 CHAR), 
-	"LIABILITY_DESCRIBE" VARCHAR2(510 CHAR), 
-	 PRIMARY KEY ("ID")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "LIWEI"  ENABLE
-   ) SEGMENT CREATION IMMEDIATE 
-  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "LIWEI" ;
- 
+function callbackbudgetName(obj){
+	
+	console.log(obj);
+	
+	
+	
+	//新增
+	if(ReactAPI.getParamsInRequestUrl().id == undefined){
+		console.log('add');
+		
+		costBudget = obj;
+		extractionReceiveAmount = 0;
+		
+		
+	}else{//编辑
+		console.log('edit');
+	
+	}
 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."VERSION" IS '版本信息';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."DELETE_TIME" IS '删除时间';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."MODIFY_TIME" IS '修改时间';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."CREATE_TIME" IS '创建时间';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."DELETE_STAFF_ID" IS '删除者';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."MODIFY_STAFF_ID" IS '修改者';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."CREATE_STAFF_ID" IS '创建者';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."VALID" IS '是否有效';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."CID" IS '公司ID';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."SORT" IS '顺序';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."EFFECTIVE_STATE" IS '生效状态';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."PROCESS_VERSION" IS '流程版本';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."PROCESS_KEY" IS '流程key';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."DEPLOYMENT_ID" IS '流程ID';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."GROUP_ID" IS '组ID';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."STATUS" IS '状态';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."EFFECT_TIME" IS '生效时间';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."EFFECT_STAFF_ID" IS '生效人';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."OWNER_DEPARTMENT_ID" IS '所有者部门';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."OWNER_POSITION_ID" IS '所有者主岗';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."OWNER_STAFF_ID" IS '所有者';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."POSITION_LAY_REC" IS '岗位层级结构';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."CREATE_POSITION_ID" IS '创建岗位';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."CREATE_DEPARTMENT_ID" IS '创建部门';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."TABLE_NO" IS '单据编号';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."TABLE_INFO_ID" IS '表单ID';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."LIABILITY_NAME" IS '名称';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."PERSON_LIABLE" IS '责任人';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."RESPONSIBLE_DEPARTMENT" IS '责任部门';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."LIABLITY_SIGN_TIME" IS '签订日期';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."LIABILITY_CATEGORY" IS '责任书类别';
- 
-   COMMENT ON COLUMN "LW10"."SESWSSOR_LETTER_LIABILITIES"."LIABILITY_DESCRIBE" IS '描述';
- 
-   COMMENT ON TABLE "LW10"."SESWSSOR_LETTER_LIABILITIES"  IS '责任书';
- 
+}
+
+function callbackextractionReceiveAmount(obj){
+	
+	console.log(obj);
+
+	//设置预算结余值
+	if(budgetBalance === '' || budgetBalance == undefined){
+		budgetBalance = ReactAPI.getComponentAPI('InputNumber').APIs('budgetExt.budgetCode.budgetBalance').getValue();
+		console.log('budgetBalance:' + budgetBalance);
+	}
+	//设置提取金额值
+	if(extractionReceiveAmount === '' || extractionReceiveAmount == undefined){
+		extractionReceiveAmount = ReactAPI.getComponentAPI('InputNumber').APIs('budgetExt.extractionReceiveAmount').getValue();
+	}
+	
+	//新增
+	if(ReactAPI.getParamsInRequestUrl().id == undefined){
+		console.log('add');
+		
+		ReactAPI.getComponentAPI('InputNumber').APIs('budgetExt.budgetCode.budgetBalance').setValue(budgetBalance - obj);
+		
+		
+	}else{//编辑
+	
+		console.log('edit');
+		//多提10块钱
+		//页面结余少十块钱
+		
+		//结余 = 结余 + 原来的领取金额 - 页面的领取金额
+		var newbudgetBalance = budgetBalance + extractionReceiveAmount - obj;
+		ReactAPI.getComponentAPI('InputNumber').APIs('budgetExt.budgetCode.budgetBalance').setValue(newbudgetBalance);
+		
+		extractionReceiveAmount = obj;
+		budgetBalance = newbudgetBalance;
+		
+		
+	
+	}
+
+}

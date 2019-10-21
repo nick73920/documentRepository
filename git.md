@@ -1,5 +1,7 @@
 # git
 
+https://blog.csdn.net/weixin_41836744/article/details/101838960
+
 git checkout -b test
 
 git remote update origin -p
@@ -42,3 +44,9 @@ git fetch origin --prune
 git tag -l
 查看远程: 
 git show-ref --tag
+
+# 清除未跟踪的文件
+git  clean  -f
+
+# 查询远程地址
+git  remote -v
