@@ -20,3 +20,9 @@ https://blog.csdn.net/weixin_38061311/article/details/86995817
 
 # chromeDriver
 https://www.cnblogs.com/sxming/p/7662945.html
+
+# 不能用 的防火墙
+https://blog.csdn.net/xiaoxuetu_/article/details/77098028
+
+# u盘装机
+https://blog.csdn.net/weixin_43007659/article/details/101202374

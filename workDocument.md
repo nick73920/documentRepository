@@ -29,6 +29,11 @@ operator
 # bap前端开发文档
 http://192.168.90.164:8242/ui-doc/
 
+# bap后台Api
+http://192.168.90.164:8242/sosoapi-web/auth/apidoc/preview.htm?docId=3        
+admin@supcon.com
+123456
+
 # 工作流平台
 http://192.168.95.161:8080
 zs
@@ -40,6 +45,8 @@ C:\bap\MisServer\MsLogs\sesWssORMs\MS-Manage.log
 # bap Bug
 http://192.168.90.104:8080/zentao/project-bug-51.html
 liwei
+a_11111111
+ludunyue
 a_11111111
 
 # 代码目录
@@ -54,6 +61,17 @@ a_11111111
 5、查看提醒人配置，是否绑定有报警的报警设备或危险源
 6、查看提醒规则服务日志
 
+# customer地址
+\\192.168.95.164\bap\bap-server\bap-workspace\generate\SESWssKPI_1.0.0\service\src\main
+
 C:\bap\MisServer\jdk1.8.0_66\bin
-java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=12100 -jar C:\VxBAP\bap-server\bap-workspace\generate\UB\target\UB-1.0.0.jar
+C:\bap\bap-server\bap-workspace\generate\SESWssFee\target
+
+# 费用项目
 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=12100 -jar C:\bap\bap-server\bap-workspace\generate\SESWssFee\target\SESWssFee-1.0.0.jar
+
+# 考核项目
+java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=12100 -jar C:\bap\bap-server\bap-workspace\generate\SESWssFee\target\SESWssFee-1.0.0.jar
+
+# 计划项目
+java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=12100 -jar C:\bap\bap-server\bap-workspace\generate\sesWssPlanWs\target\sesWssPlanWs-1.0.0.jar
