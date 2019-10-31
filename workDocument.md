@@ -4,7 +4,7 @@
 http://10.30.20.206:9888/zentao
 
 # bap资料整理
-ftp://192.168.90.8/BAP/5.00/    
+ftp://192.168.90.8/BAP/5.00/
 账号  bap  
 密码  Supcon1304
 
@@ -64,7 +64,7 @@ a_11111111
 # customer地址
 \\192.168.95.164\bap\bap-server\bap-workspace\generate\SESWssKPI_1.0.0\service\src\main
 
-C:\bap\MisServer\jdk1.8.0_66\bin
+C:\Windows\System32\cmd.exe
 C:\bap\bap-server\bap-workspace\generate\SESWssFee\target
 
 # 费用项目

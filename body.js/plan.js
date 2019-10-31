@@ -18,8 +18,7 @@ function trackFeedBackClick(){
         return false;
 	}
 
-	var url = '/msService/SESWSSPlan/productPlan/indictorTask/indictorTaskEdit?__pc__=aW5kaWN0b3JUYXNrTGlzdF9zaW5nbGVFZGl0X21vZGlmeV9TRVNXU1NQbGFuXzEuMC4wX3Byb2R1Y3RQbGFuX2luZGljdG9yVGFza0xpc3R8&viewCode=SESWSSPlan_1.0.0_productPlan_indictorTaskList&entityCode=SESWSSPlan_1.0.0_productPlan&iscrosscompany=false&openType=frame&viewType=edit';
-	//var url = '/msService/SESWSSPlan/productPlan/indictorTask/indictorTaskEdit?__pc__=aW5kaWN0b3JUYXNrTGlzdF9zaW5nbGVFZGl0X21vZGlmeV9TRVNXU1NQbGFuXzEuMC4wX3Byb2R1Y3RQbGFuX2luZGljdG9yVGFza0xpc3R8&viewCode=SESWSSPlan_1.0.0_productPlan_indictorTaskList&entityCode=SESWSSPlan_1.0.0_productPlan&iscrosscompany=false&openType=frame&viewType=edit&id=' + rowDate[0].id;
+	var url = '/msService/SESWSSPlan/productPlan/indictorTask/indictorTaskEdit?__pc__=aW5kaWN0b3JUYXNrTGlzdF9zaW5nbGVFZGl0X21vZGlmeV9TRVNXU1NQbGFuXzEuMC4wX3Byb2R1Y3RQbGFuX2luZGljdG9yVGFza0xpc3R8&viewCode=SESWSSPlan_1.0.0_productPlan_indictorTaskList&entityCode=SESWSSPlan_1.0.0_productPlan&iscrosscompany=false&openType=frame&viewType=edit&id=' + rowDate[0].id;
 	window.open(url);
 }
 
@@ -47,9 +46,3 @@ if(rowDate.length === 0){
 
 
 //编辑指标
-/msService/SESWSSPlan/productPlan/indictorTask/indictorTaskEdit?__pc__=aW5kaWN0b3JUYXNrTGlzdF9zaW5nbGVFZGl0X21vZGlmeV9TRVNXU1NQbGFuXzEuMC4wX3Byb2R1Y3RQbGFuX2luZGljdG9yVGFza0xpc3R8&viewCode=SESWSSPlan_1.0.0_productPlan_indictorTaskList&entityCode=SESWSSPlan_1.0.0_productPlan&iscrosscompany=false&openType=frame&viewType=edit
-
-http://192.168.95.164:8080/msService/SESWSSPlan/productPlan/indictorTask/indictorTaskEdit?__pc__=aW5kaWN0b3JUYXNrTGlzdF9zaW5nbGVFZGl0X21vZGlmeV9TRVNXU1NQbGFuXzEuMC4wX3Byb2R1Y3RQbGFuX2luZGljdG9yVGFza0xpc3R8&viewCode=SESWSSPlan_1.0.0_productPlan_indictorTaskList&entityCode=SESWSSPlan_1.0.0_productPlan&iscrosscompany=false&openType=frame&viewType=edit
-
-//新增多条指标
-http://192.168.95.164:8080/msService/SESWSSPlan/productPlan/productPlan/indictorAssesScore?__pc__=aW5kaWN0b3JUYXNrTGlzdF9hYWFfYWRkX1NFU1dTU1BsYW5fMS4wLjBfcHJvZHVjdFBsYW5faW5kaWN0b3JUYXNrTGlzdHw_&viewCode=SESWSSPlan_1.0.0_productPlan_indictorTaskList&entityCode=SESWSSPlan_1.0.0_productPlan&iscrosscompany=false&openType=frame&viewType=edit
