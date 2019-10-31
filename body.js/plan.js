@@ -41,8 +41,20 @@ if(rowDate.length === 0){
 	return false;
 }
 
-//计算完成状态，完成率
+//选年
+function planTypeClick(obj){
+	console.log(obj);
+	if(obj === 'SESWSSPlan_SESWSSPlan_planType/001'){
+		ReactAPI.getComponentAPI('Reference').APIs('productPlan.planQuarter').setReadonly(true);
+	}else if(obj === 'SESWSSPlan_SESWSSPlan_planType/002'){
+		
+	}else if(obj === 'SESWSSPlan_SESWSSPlan_planType/003'){
+		
+	}
+}
+
+//选季
 
 
+//选月
 
-//编辑指标
